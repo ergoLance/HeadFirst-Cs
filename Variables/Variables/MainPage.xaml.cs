@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 namespace Variables
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// An empty page that can be used on its own or navigated to within a Frame. fuck yeah
     /// </summary>
     public sealed partial class MainPage : Page
     {
