@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="task119.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:task119"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="changeText" Content="Change the label" HorizontalAlignment="Center" Click="button_click"/>
+        <CheckBox x:Name="enableCheckbox" Content="Label changing is enabled" IsChecked="True" Grid.Column="1" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="labelToChange" Text="Press the button to change my text!" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2"/>
+        
+    </Grid>
+</Page>
