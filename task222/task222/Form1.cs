@@ -16,15 +16,13 @@ namespace task222
         public Form1()
         {
             InitializeComponent();
-            dinnerParty = new DinnerParty() { NumberOfPeople = 5 };
-            dinnerParty.SetHealthyOption(false);
-            dinnerParty.CalculateCostOfDecorations(true);
+            dinnerParty = new DinnerParty((int)numericUpDown1.Value, healthyBox.Checked,fancyBox.Checked);
             DisplayDinnerPartyCost();
         }
 
         private void DisplayDinnerPartyCost()
         {
-            decimal Cost = dinnerParty.CalculateCost(healthyBox.Checked);
+            decimal Cost = dinnerParty.Cost;
             costLabel.Text = Cost.ToString("c");
         }
 
@@ -36,12 +34,12 @@ namespace task222
 
         private void fancyBox_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.CalculateCostOfDecorations(fancyBox.Checked);
+            dinnerParty.FancyDecorations = fancyBox.Checked;
             DisplayDinnerPartyCost();
         }
         private void healthyBox_CheckedChanged(object sender, EventArgs e)
         {
-            dinnerParty.SetHealthyOption(healthyBox.Checked);
+            dinnerParty.HealthyOption = healthyBox.Checked;
             DisplayDinnerPartyCost();
         }
 
