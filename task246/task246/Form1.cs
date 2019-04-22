@@ -16,7 +16,7 @@ namespace task246
         public Form1()
         {
             InitializeComponent();
-            farmer = new Farmer() { NumberOfCows = 15 };
+            farmer = new Farmer(15,30);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace task246
 
         private void button2_Click(object sender, EventArgs e)
         {
-            farmer.BagsOfFeed = 5;
+            
         }
     }
 }

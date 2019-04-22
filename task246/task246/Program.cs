@@ -22,8 +22,14 @@ namespace task246
 
     class Farmer
     {
-        public int BagsOfSeed { get; set; }
-        public const int FeedMultiplier = 30;
+        public Farmer(int numberOfCows, int feedMultiplier)
+        {
+            this.feedMultiplier = feedMultiplier;
+            NumberOfCows = numberOfCows;
+        }
+        public int BagsOfFeed { get; private set; }
+        private int feedMultiplier;
+        public int FeedMultiplier { get { return feedMultiplier; } }
 
         private int numberOfCows;
         public int NumberOfCows
